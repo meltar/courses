@@ -51,6 +51,6 @@ rake db:test:load
 ```
 Then run `db:populate` as needed to add sample data.
 
-##Project Core Contributors:
+##Project Contributors:
 * [@meltar](https://github.com/meltar)
 * [@mLese](https://github.com/mlese)
