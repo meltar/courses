@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 1.2'
 
 group :development do
 	gem 'faker', '1.0.1'
+	gem 'pry'
 end
 
 group :test do
