@@ -7,7 +7,8 @@ describe Course do
 														city: "Atlanta",
 														state: "GA",
 														zip: "30342", 
-														number_of_holes: 9) }
+														number_of_holes: 9
+													 ) }
 	let(:new_course) { Course.create(name: "Test Course Two") }
 
 	describe "validations" do
