@@ -3,4 +3,5 @@ class Hole < ActiveRecord::Base
 
 	validates :label, presence: true
 	validates :tee_1_par, presence: true
+	validates :course_id, presence: true
 end

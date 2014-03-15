@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Hole do
-	let(:course) { Course.new(name: "Test Course One",
+	let(:course) { Course.create(name: "Test Course One",
 														description: "My favorite course at the park",
 														address: "123 Address Rd",
 														city: "Atlanta",
@@ -9,10 +9,9 @@ describe Hole do
 														zip: "30342", 
 														number_of_holes: 9,
 														) }
-	let(:hole) { Hole.new(course_id: course.id,
-												tee_1_par: 3,
-												label: "6",
-											 ) }
+	let(:hole) { course.holes.build(tee_1_par: 3,
+														label: "6",
+													 ) }
 
 	describe "validations" do
 
@@ -40,6 +39,27 @@ describe Hole do
 			end
 		end
 
+		describe "course" do
+			it "should have an id" do
+				expect(hole.course_id).to be_present
+			end
+
+			describe "no id" do
+				before { hole.course_id = nil }
+
+				it "should be invalid without an id" do
+					expect(hole).to_not be_valid
+				end
+			end
+		end
+
+	end
+
+	describe "course association" do
+
+		it "should respond to course" do
+			expect(hole.course).to be_a(Course)
+		end
 	end
 
 end

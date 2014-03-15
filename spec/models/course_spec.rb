@@ -63,6 +63,17 @@ describe Course do
 			end
 		end
 
+		describe "hole association" do
+			before do
+				hole = course.holes.build(label: "2", tee_1_par: 3)
+				hole.save
+			end
+
+			it "should respond to holes" do
+				expect(course.holes.first).to be_a(Hole)
+			end
+		end
+
 	end
 
 end
