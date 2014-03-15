@@ -1,10 +1,25 @@
 <h1>All Courses</h1>
 
-<ol>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Holes</th>
+		<th>Address</th>
+		<th>City</th>
+		<th>State</th>
+		<th>Zip</th>
+		<th>Description</th>
+	</tr>
+
 	<% @courses.each do |course| %>
-		<li>
-			<%= course.name %>
-			<%= course.number_of_holes %>
-		</li>
+		<tr>
+			<td><%= course.name %></td>
+			<td><%= course.number_of_holes %></td>
+			<td><%= course.address %></td>
+			<td><%= course.city %></td>
+			<td><%= course.state %></td>
+			<td><%= course.zip %></td>
+			<td><%= course.description %></td>
+		</tr>
 	<% end %>
-</ol>
+</table>
