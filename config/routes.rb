@@ -1,4 +1,11 @@
 Courses::Application.routes.draw do
+  get "courses/index"
+  get "courses/new"
+  get "courses/create"
+  get "courses/show"
+  get "courses/edit"
+  get "courses/update"
+  get "courses/delete"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
