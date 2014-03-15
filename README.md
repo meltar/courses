@@ -22,6 +22,18 @@ These commands do the following:
   3. Add all of the tables and table attributes to the database defined in the migration files in db/migrate
   4. Add all of the tables and table attributes to the test database
 
+To run the test suite:
+```
+bundle exec rake
+```
+
+To run the app locally:
+```
+rails s
+```
+The default host location is http://localhost:3000.
+
+
 Project Core Contributors:
 * Melissa Holmes [@meltar](https://github.com/meltar)
 * Michael Lese [@mLese](https://github.com/mlese)
