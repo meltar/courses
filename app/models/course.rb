@@ -1,5 +1,6 @@
 class Course < ActiveRecord::Base
 	after_initialize :init
+	has_many :holes
 
 	validates :name, presence: true, length: { maximum: 50 }
 	validates :number_of_holes, inclusion: { in: 1..99 }
