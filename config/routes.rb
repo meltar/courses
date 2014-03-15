@@ -1,7 +1,8 @@
 Courses::Application.routes.draw do
 	root to: 'courses#index'
 
-	resources :courses
-	resources :holes
+	resources :courses do
+		resources :holes
+	end
 
 end
