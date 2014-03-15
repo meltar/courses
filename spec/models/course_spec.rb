@@ -65,7 +65,7 @@ describe Course do
 
 		describe "hole association" do
 			before do
-				hole = course.holes.build(label: "2", tee_1_par: 3)
+				hole = course.holes.build(label: "2", par_1: 3)
 				hole.save
 			end
 

@@ -9,7 +9,7 @@ describe Hole do
 														zip: "30342", 
 														number_of_holes: 9,
 														) }
-	let(:hole) { course.holes.build(tee_1_par: 3,
+	let(:hole) { course.holes.build(par_1: 3,
 														label: "6",
 													 ) }
 
@@ -35,7 +35,7 @@ describe Hole do
 
 		describe "tees" do
 			it "should have a par" do
-				expect(hole.tee_1_par).to be_present
+				expect(hole.par_1).to be_present
 			end
 		end
 

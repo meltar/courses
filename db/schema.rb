@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140315032900) do
+ActiveRecord::Schema.define(version: 20140315172823) do
 
   create_table "courses", force: true do |t|
     t.string   "name"
@@ -28,14 +28,14 @@ ActiveRecord::Schema.define(version: 20140315032900) do
   create_table "holes", force: true do |t|
     t.integer  "course_id"
     t.string   "label"
-    t.integer  "tee_1_length"
-    t.string   "tee_1_par"
-    t.integer  "tee_2_length"
-    t.integer  "tee_2_par"
-    t.integer  "tee_3_length"
-    t.integer  "tee_3_par"
-    t.integer  "tee_4_length"
-    t.integer  "tee_4_par"
+    t.integer  "length_1"
+    t.string   "par_1"
+    t.integer  "length_2"
+    t.integer  "par_2"
+    t.integer  "length_3"
+    t.integer  "par_3"
+    t.integer  "length_4"
+    t.integer  "par_4"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
