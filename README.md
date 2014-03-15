@@ -47,7 +47,6 @@ rake db:test:prepare
 **Reset the database:**
 ```
 rake db:reset
-rake db:schema:load
 rake db:test:load
 ```
 Then run `db:populate` as needed to add sample data.
