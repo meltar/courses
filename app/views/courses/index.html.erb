@@ -12,14 +12,6 @@
 	</tr>
 
 	<% @courses.each do |course| %>
-		<tr>
-			<td><%= course.name %></td>
-			<td><%= course.number_of_holes %></td>
-			<td><%= course.address %></td>
-			<td><%= course.city %></td>
-			<td><%= course.state %></td>
-			<td><%= course.zip %></td>
-			<td><%= course.description %></td>
-		</tr>
+		<%= render course %>
 	<% end %>
 </table>
