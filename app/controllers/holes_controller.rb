@@ -1,6 +1,7 @@
 class HolesController < ApplicationController
   def index
-		@holes = Hole.all
+		@course = Course.find(params[:course_id])
+		@holes = @course.holes
 		respond_to do |format|
 			format.html
 			format.json { render json: @holes }
