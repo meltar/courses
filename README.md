@@ -1,43 +1,51 @@
 Courses
 ==========================
 
-To get this app up and running, run these commands in console:
+#To get this app up and running, run these commands in console:
 
-```bash
+###Install all of the necessary gems listed in the Gemfile
+```
 bundle install
 ```
-```bash
+
+###Create the test and development databases based on the configuration specified in config/database.yml
+```
 rake db:create:all
 ```
-```bash
-rake db:migrate
+
+###Add all of the tables and table attributes to the database defined in the migration files in db/migrate and
+update the test environment to match.
 ```
-```bash
+rake db:migrate
 rake db:test:prepare
 ```
 
-These commands do the following:
-  1. Install all of the necessary gems listed in the Gemfile
-  2. Create the test and development databases based on the configuration specified in config/database.yml
-  3. Add all of the tables and table attributes to the database defined in the migration files in db/migrate
-  4. Add all of the tables and table attributes to the test database
+#To run common commands in development:
 
-To run the test suite:
+###Run the test suite:
 ```
 bundle exec rake
 ```
 
-To run the app locally:
+###To run the app locally:
 ```
 rails s
 ```
 The default host location is http://localhost:3000.
 
-To add test data to the app:
+###To add test data to the app:
 ```
 rake db:populate
 ```
 
-Project Core Contributors:
-* Melissa Holmes [@meltar](https://github.com/meltar)
-* Michael Lese [@mLese](https://github.com/mlese)
+###To reset the database:
+```
+rake db:reset
+rake db:migrate
+rake db:test:prepare
+```
+Then run `db:populate` as needed to add sample data.
+
+#Project Core Contributors:
+* [@meltar](https://github.com/meltar)
+* [@mLese](https://github.com/mlese)
