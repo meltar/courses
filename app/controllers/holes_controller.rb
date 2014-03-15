@@ -1,8 +1,18 @@
 class HolesController < ApplicationController
   def index
+		@holes = Hole.all
+		respond_to do |format|
+			format.html
+			format.json { render json: @holes }
+		end
   end
 
   def show
+		@hole = Hole.find(params[:id])
+		respond_to do |format|
+			format.html
+			format.json { render json: @hole }
+		end
   end
 
   def edit
