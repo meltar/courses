@@ -33,6 +33,10 @@ rails s
 ```
 The default host location is http://localhost:3000.
 
+To add test data to the app:
+```
+rake db:populate
+```
 
 Project Core Contributors:
 * Melissa Holmes [@meltar](https://github.com/meltar)
