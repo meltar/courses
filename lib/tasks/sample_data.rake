@@ -22,6 +22,7 @@ def make_courses
 		count = 1
 		new_course.number_of_holes.times do |hole|
 			new_course.holes.build(label: count, par_1: [2, 3, 3, 3, 4, 5].sample)
+			count += 1
 		end
 		new_course.save
 	end
