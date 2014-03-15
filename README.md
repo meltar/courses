@@ -13,11 +13,11 @@ bundle install
 rake db:create:all
 ```
 
-**Add all of the tables and table attributes to the database defined in the migration files in db/migrate.**
+**Add all of the tables and table attributes to the database defined in db/schema.rb.**
 **Update the test environment to match.**
 ```
-rake db:migrate
-rake db:test:prepare
+rake db:schema:load
+rake db:test:load
 ```
 
 ##To run common commands in development:
@@ -38,11 +38,17 @@ The default host location is http://localhost:3000.
 rake db:populate
 ```
 
+**Run migrations**
+```
+rake db:migrate
+rake db:test:prepare
+```
+
 **Reset the database:**
 ```
 rake db:reset
-rake db:migrate
-rake db:test:prepare
+rake db:schema:load
+rake db:test:load
 ```
 Then run `db:populate` as needed to add sample data.
 
